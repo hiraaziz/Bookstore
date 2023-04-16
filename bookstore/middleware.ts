@@ -9,7 +9,7 @@ export async function middleware(request: NextRequest) {
     .get("authorization")
     ?.replace("Bearer ", "");
 
-  const result = await fetch("http://localhost:3000/api/auth/", {
+  const result = await fetch("https://hira-bookstore.vercel.app/api/auth/", {
     //Call API to Verify token from database
     method: "GET",
     headers: {
