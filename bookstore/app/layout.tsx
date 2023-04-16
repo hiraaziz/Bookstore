@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="w-full h-20 bg-purple-200 flex justify-evenly items-center">
+        {/* <div className="w-full h-20 bg-purple-200 flex justify-evenly items-center">
           <Link
             href="/"
             className="text-purple-700 font-semibold text-md
@@ -29,7 +29,7 @@ export default function RootLayout({
           >
             All Orders
           </Link>
-        </div>
+        </div> */}
         {children}
       </body>
     </html>

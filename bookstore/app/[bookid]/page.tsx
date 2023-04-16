@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Button from "./Button";
 type books = {
   id: number;
   name: string;
@@ -52,12 +52,13 @@ async function Page({ params }: { params: { bookid: number } }) {
         <label className="font-normal">Available: </label>
         {book.available === true ? "true" : "flase"}
       </h1>
-      <Link
+      {/* <Link
         href={`/${params.bookid}/postreq`}
         className="p-2 bg-slate-100 rounded-md text-md font-medium mt-4 hover:bg-slate-50"
       >
         Order book
-      </Link>
+      </Link> */}
+      <Button />
     </div>
   );
 }
