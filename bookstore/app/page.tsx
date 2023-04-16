@@ -33,71 +33,76 @@ export default async function Home() {
     //     </div>
     //   ))}
     // </div>
-    <>
-      <div className="bg-slate-200 w-full h-screen flex flex-col justify-center items-center">
-        <div className="bg-white w-[80%] h-[70px] flex list-none space-x-40 justify-center font-bold items-center text-left">
-          <li>End Points</li>
-          <li>Required Body</li>
-          <li>Return</li>
-          <li>Token require</li>
-        </div>
-        <div className="bg-slate-100 w-[80%] h-[70px] flex list-none space-x-40 justify-center items-center text-md text-left">
-          <li>GET: /api/status</li>
-          <li>no</li>
-          <li>Return the status of API</li>
-          <li>no</li>
-        </div>
-        <div className="bg-slate-100 w-[80%] h-[70px] flex list-none space-x-28 justify-center items-center text-md text-left">
-          <li>POST: /api/api-clients</li>
-          <li> name: string, email:string</li>
-          <li>Return access token</li>
-          <li>no</li>
-        </div>
-        <div className="bg-slate-100 w-[80%] h-[70px] flex list-none space-x-40 justify-center items-center text-md">
-          <li>GET: /api/books</li>
-          <li>no</li>
-          <li>Return list of book</li>
-          <li>no</li>
-        </div>
-        <div className="bg-slate-100 w-[80%] h-[70px] flex list-none space-x-40 justify-center items-center text-md">
-          <li>GET: /api/books/:id</li>
-          <li>no</li>
-          <li>Return deatils of book</li>
-          <li>no</li>
-        </div>
-        <div className="bg-slate-100 w-[80%] h-[140px] flex list-none space-x-40 justify-center items-center text-md">
-          <li>POST: /api/protected/orders/</li>
-          <li className="w-[150px]">
-            bookId: number, customerName: string, quantity: number
-          </li>
-          <li>Post an Order</li>
-          <li>yes</li>
-        </div>
-        <div className="bg-slate-100 w-[80%] h-[70px] flex list-none space-x-40 justify-center items-center text-md">
-          <li>GET: /api/orders/</li>
-          <li>no</li>
-          <li>Return list of order</li>
-          <li>yes</li>
-        </div>
-        <div className="bg-slate-100 w-[80%] h-[70px] flex list-none space-x-40 justify-center items-center text-md">
-          <li>GET: /api/orders/:orderid</li>
-          <li>no</li>
-          <li>Return a single order</li>
-          <li>yes</li>
-        </div>
-        <div className="bg-slate-100 w-[80%] h-[70px] flex list-none space-x-40 justify-center items-center text-md">
-          <li>PUT: /api/orders/:orderid</li>
-          <li>customerName:string</li>
-          <li>update customer name</li>
-          <li>yes</li>
-        </div>
-        <div className="bg-slate-100 w-[80%] h-[70px] flex list-none space-x-40 justify-center items-center text-md">
-          <li>DELETE: /api/orders/:orderid</li>
-          <li>no</li>
-          <li>delete order</li>
-          <li>yes</li>
-        </div>
-      </div>
-    </>
+    <div className="bg-slate-200 w-full h-screen flex justify-center items-center">
+      <table className="bg-slate-200 w-[80%] h-[90%]">
+        <thead>
+          <tr className="bg-white font-bold text-left">
+            <th className="p-4">End Points</th>
+            <th className="p-4">Required Body</th>
+            <th className="p-4">Return</th>
+            <th className="p-4">Token require</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="bg-slate-100 text-md text-left">
+            <td className="p-4">GET: /api/status</td>
+            <td className="p-4">no</td>
+            <td className="p-4">Return the status of API</td>
+            <td className="p-4">no</td>
+          </tr>
+          <tr className="bg-slate-100 text-md text-left">
+            <td className="p-4">POST: /api/api-clients</td>
+            <td className="p-4">name: string, email: string</td>
+            <td className="p-4">Return access token</td>
+            <td className="p-4">no</td>
+          </tr>
+          <tr className="bg-slate-100 text-md text-left">
+            <td className="p-4">GET: /api/books</td>
+            <td className="p-4">no</td>
+            <td className="p-4">Return list of book</td>
+            <td className="p-4">no</td>
+          </tr>
+          <tr className="bg-slate-100 text-md text-left">
+            <td className="p-4">GET: /api/books/:id</td>
+            <td className="p-4">no</td>
+            <td className="p-4">Return deatils of book</td>
+            <td className="p-4">no</td>
+          </tr>
+          <tr className="bg-slate-100 text-md text-left">
+            <td className="p-4">POST: /api/protected/orders/</td>
+            <td className="p-4">
+              bookId: number, customerName: string, quantity: number
+            </td>
+            <td className="p-4">Post an Order</td>
+            <td className="p-4">yes</td>
+          </tr>
+          <tr className="bg-slate-100 text-md text-left">
+            <td className="p-4">GET: /api/orders/</td>
+            <td className="p-4">no</td>
+            <td className="p-4">Return list of order</td>
+            <td className="p-4">yes</td>
+          </tr>
+          <tr className="bg-slate-100 text-md text-left">
+            <td className="p-4">GET: /api/orders/:orderid</td>
+            <td className="p-4">no</td>
+            <td className="p-4">Return a single order</td>
+            <td className="p-4">yes</td>
+          </tr>
+          <tr className="bg-slate-100 text-md text-left">
+            <td className="p-4">PUT: /api/orders/:orderid</td>
+            <td className="p-4">customerName: string</td>
+            <td className="p-4">update customer name</td>
+            <td className="p-4">yes</td>
+          </tr>
+
+          <tr className="bg-slate-100 text-md text-left">
+            <td className="p-4">DELETE: /api/orders/:orderid</td>
+            <td className="p-4">no</td>
+            <td className="p-4">delete order</td>
+            <td className="p-4">yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 }
