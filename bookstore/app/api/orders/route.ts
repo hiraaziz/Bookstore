@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "missing data required" });
 
   try {
-    const result = await sql.unsafe(
+    await sql.unsafe(
       "insert into orders ( bookId, customerName, quantity) values ($1, $2, $3)",
       [bookId, customerName, quantity]
     );
@@ -24,7 +24,7 @@ export async function GET(request: Request) {
   let sql = connectdatabase();
 
   try {
-    const result = await sql.unsafe("select * from orders");
+    const result: order[] = await sql.unsafe("select * from orders");
     return NextResponse.json({ result });
   } catch (error: any) {
     return NextResponse.json({ message: "bad request" });
