@@ -33,7 +33,7 @@ export async function POST(request: Request) {
   let sql = connectdb();
 
   try {
-    const result = await sql.unsafe(
+    await sql.unsafe(
       "insert into users (id, name, email, token) values ($1, $2, $3, $4)",
       [id, name, email, token]
     );
