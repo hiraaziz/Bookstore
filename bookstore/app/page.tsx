@@ -69,7 +69,7 @@ export default async function Home() {
             <td className="p-4">no</td>
           </tr>
           <tr className="bg-slate-100 text-md text-left">
-            <td className="p-4">POST: /api/protected/orders/</td>
+            <td className="p-4">POST: /api/orders/</td>
             <td className="p-4">
               bookId: number, customerName: string, quantity: number
             </td>
