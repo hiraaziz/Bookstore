@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
-import validToken from "./components/validToken";
 
 export async function middleware(request: NextRequest) {
-  const { method, url } = request; // destructure method and url from request
-
   const bearer_token = request.headers // destructure autorization
     .get("authorization")
     ?.replace("Bearer ", "");
@@ -21,8 +18,6 @@ export async function middleware(request: NextRequest) {
   const res = await result.json();
 
   if (res.result.length !== 0) {
-    // Get DELETE method
-    // validToken(method, url, request);
     const headers = new Headers(request.headers);
     return NextResponse.next({ headers });
   }
