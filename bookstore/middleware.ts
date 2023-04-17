@@ -29,9 +29,5 @@ export async function middleware(request: NextRequest) {
 
 // See "Matching Paths"
 export const config = {
-  api: {
-    bodyParser: false,
-  },
-  externalResolver: true,
   matcher: ["/api/orders/:path*"],
 };
