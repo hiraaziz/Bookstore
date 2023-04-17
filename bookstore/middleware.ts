@@ -22,7 +22,9 @@ export async function middleware(request: NextRequest) {
 
   if (res.result.length !== 0) {
     // Get DELETE method
-    validToken(method, url, request);
+    // validToken(method, url, request);
+    const headers = new Headers(request.headers);
+    return NextResponse.next({ headers });
   }
   // if token is not valid
   else {
