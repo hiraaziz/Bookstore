@@ -41,7 +41,7 @@ export async function DELETE(request: Request, { params: { id } }: Props) {
 
   try {
     await sql.unsafe("delete from orders where id = $1", [id]);
-    return NextResponse.json({ message: "Resource updated" });
+    return NextResponse.json({ message: "order deleted" });
   } catch (error: any) {
     return NextResponse.json({ message: "bad request" });
   }
