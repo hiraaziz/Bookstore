@@ -9,9 +9,10 @@ export async function GET(request: Request) {
   let sql = connectdatabase();
 
   try {
-    let result = await sql.unsafe("select token from users where token = $1", [
-      bearer_token,
-    ]);
+    let result: [] | [{ token: string }] = await sql.unsafe(
+      "select token from users where token = $1",
+      [bearer_token]
+    );
 
     return NextResponse.json({ result });
   } catch (error: any) {
